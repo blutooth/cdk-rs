@@ -13,7 +13,7 @@ crate-type = ["cdylib"]
 [dependencies]
 ic-cdk = { path = "../../../../src/ic-cdk", version = "0.1.0" }
 ic-cdk-macros = { path = "../../../../src/ic-cdk-macros", version = "0.1.0" }
-candid = { git = "https://github.com/dfinity/candid.git", branch = "derive-func" }
+candid = { git = "https://github.com/dfinity/candid.git", branch = "master" }
 serde = "1.0.111"
 
 [features]
