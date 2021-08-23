@@ -1,6 +1,6 @@
 [package]
 name = "ic-cdk-macros"
-version = "0.1.1"
+version = "0.3.1"
 authors = ["DFINITY Stiftung <sdk@dfinity.org>"]
 edition = "2018"
 description = "Canister Developer Kit macros."
@@ -17,9 +17,13 @@ proc-macro = true
 
 [dependencies]
 candid = { git = "https://github.com/dfinity/candid.git", branch = "master" }
-ic-cdk = { path = "../ic-cdk", version = "0.3.1" }
-syn = { version = "1.0", features = ["fold", "full"] }
+ic-cdk = { path = "../ic-cdk", version = "0.3.0" }
+syn = { version = "1.0.58", features = ["fold", "full"] }
 quote = "1.0"
 proc-macro2 = "1.0"
 serde_tokenstream = "0.1.0"
 serde = "1.0.111"
+
+[features]
+default = ["redirect"]
+redirect = ["candid/cdk"]

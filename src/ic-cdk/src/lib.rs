@@ -1,7 +1,3 @@
-// Use `wee_alloc` as the global allocator.
-#[global_allocator]
-static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
-
 pub mod api;
 mod futures;
 mod printer;
@@ -13,7 +9,8 @@ pub use api::{caller, id, print, trap};
 static mut DONE: bool = false;
 
 pub mod export {
-    pub use ic_types::Principal;
+    pub use candid;
+    pub use candid::types::ic_types::Principal;
 }
 
 /// Setup the stdlib hooks.
