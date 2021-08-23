@@ -13,7 +13,7 @@ keywords = ["internet-computer", "types", "dfinity", "canister", "cdk"]
 include = ["src", "Cargo.toml", "LICENSE", "README.md"]
 
 [dependencies]
-candid = "0.7.4"
+candid = { git = "https://github.com/dfinity/candid.git", branch = "master" }
 cfg-if = "0.1.10"
 serde = "1.0.110"
 
@@ -21,3 +21,4 @@ serde = "1.0.110"
 default = ["redirect"]
 redirect = ["candid/cdk"]
 experimental = []
+wasi = []

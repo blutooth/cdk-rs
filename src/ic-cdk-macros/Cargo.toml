@@ -16,8 +16,8 @@ include = ["src", "Cargo.toml", "LICENSE", "README.md"]
 proc-macro = true
 
 [dependencies]
-candid = "0.7.4"
-ic-cdk = { path = "../ic-cdk", version = "0.3" }
+candid = { git = "https://github.com/dfinity/candid.git", branch = "master" }
+ic-cdk = { path = "../ic-cdk", version = "0.3.0" }
 syn = { version = "1.0.58", features = ["fold", "full"] }
 quote = "1.0"
 proc-macro2 = "1.0"
